@@ -1,9 +1,19 @@
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
+@DisplayName("Testes da Classe Hora")
 public class HoraTest{
+
+    /*@BeforeEach 
+    void setUp(){
+        Hora h1 = new Hora(24,00,00);
+    }*/
+
     @Test
     public void testaInvalido(){
         Hora h1 = new Hora(24,0,0);
@@ -11,6 +21,7 @@ public class HoraTest{
         assertEquals("00:00:00",h1.horaFormatada());
     }
 
+    @DisplayName ("Testa Incrementar")
     @Test
     public void testaIncrementoHora(){
         Hora h1 = new Hora(12,00,00);
