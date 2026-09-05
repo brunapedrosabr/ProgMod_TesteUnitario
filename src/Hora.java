@@ -50,7 +50,7 @@
         this.minutos = minutos;
         this.segundos = segundos;
         if(!ehValida())
-            horas = minutos = segundos = 0;
+            this.horas = this.minutos = this.segundos = 0;
     }
 
     /**
@@ -58,7 +58,7 @@
      * Retorna TRUE ou FALSE conforme validade da hora.
      * @return TRUE para hora válida, FALSE para hora inválida.
      */
-    private boolean ehValida() {
+    public boolean ehValida() {
         return ((horas >= 0 && horas <= 23) && 
             (minutos >= 0 && minutos <= 59) && 
             (segundos >= 0 && segundos <= 59));
